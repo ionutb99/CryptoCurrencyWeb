@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #14161a;
+  color:white;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: gold;
+}
+
+.select {
+  width: 100px;
+  height: 40px;
+  margin-right: 15px;
+}
+
+.banner {
+  background-image: url(.//assets/banner2.jpg);
+}
