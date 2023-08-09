@@ -13,12 +13,12 @@ import {
   ThemeProvider,
   Typography,
   createTheme,
-  makeStyles,
 } from "@material-ui/core";
 import { useNavigate } from "react-router-dom";
 import { numberWithCommas } from "./banner/carousel";
 import { Pagination } from "@material-ui/lab";
 import { CoinListEur, CoinListUsd } from "./apis";
+import {makeStyles} from "@material-ui/core/styles";
 
  const useStyles = makeStyles(() => ({
     row: {

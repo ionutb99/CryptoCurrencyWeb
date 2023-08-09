@@ -3,9 +3,11 @@ import { useParams } from "react-router-dom";
 import { CryptoState } from "../CryptoContext";
 import axios from "axios";
 import { SingleCoin } from "../config/api";
-import { LinearProgress, Typography, makeStyles } from "@material-ui/core";
+import { LinearProgress, Typography } from "@material-ui/core";
 import { CoinInfo } from "../components/coinInfo";
 import { numberWithCommas } from "../components/banner/carousel";
+import {makeStyles} from "@material-ui/core/styles";
+import ReactHtmlParser from "react-html-parser";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -93,7 +95,7 @@ export const CoinPage = () => {
         {coin?.name}
       </Typography>
       <Typography variant="subyiyle1" className={classes.description}>
-        {coin?.description.en.split('. ')[0]}.
+        {ReactHtmlParser(coin?.description.en.split('. ')[0])}.
       </Typography>
       <div className={classes.marketData}>
         <span style={{ display: 'flex' }}>

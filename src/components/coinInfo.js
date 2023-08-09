@@ -6,11 +6,11 @@ import {
   CircularProgress,
   ThemeProvider,
   createTheme,
-  makeStyles,
 } from "@material-ui/core";
 import { Line } from "react-chartjs-2";
 import { chartDays } from "../config/data";
 import { SelectButton } from "./selectButton";
+import {makeStyles} from "@material-ui/core/styles";
 
 // To fix error "category" is not a registered scale
 import {
@@ -52,7 +52,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-let sheetManager = "someValue";
 
 export const CoinInfo = ({ coin }) => {
   const [historicalData, sethistoricalData] = useState();
@@ -137,15 +136,7 @@ export const CoinInfo = ({ coin }) => {
                 width: "100%",
               }}
             >
-              {chartDays.map((day) => (
-                <SelectButton
-                  key={day.value}
-                  onClick={() => setDays(day.value)}
-                  selected={day.value === days}
-                >
-                  {day.label}
-                </SelectButton>
-              ))}
+             
             </div>
           </>
         )}

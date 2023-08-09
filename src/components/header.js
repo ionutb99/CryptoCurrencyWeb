@@ -7,11 +7,11 @@ import {
   Toolbar,
   Typography,
   createTheme,
-  makeStyles,
 } from "@material-ui/core"; // Container: responsive,
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { CryptoState } from "../CryptoContext";
+import {makeStyles} from "@material-ui/core/styles";
 
 const useStyles = makeStyles(() => ({
   title: {
