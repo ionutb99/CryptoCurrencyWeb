@@ -55,6 +55,7 @@ export const Header = () => {
             <Select
               variant="outlined"
               className="select"
+              value={currency}
               onChange={(e) => setCurrency(e.target.value)}
             >
               <MenuItem value={"USD"}>USD</MenuItem>
